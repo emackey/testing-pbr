@@ -46,7 +46,7 @@ function init() {
     };
 
     var objLoader = new THREE.OBJLoader(manager);
-    objLoader.load('models/Chest/chest.obj', function(object) {
+    objLoader.load('models/Chest/Chest.obj', function(object) {
         var mainMesh;
         object.traverse(function (child) {
             if (child instanceof THREE.Mesh) {
