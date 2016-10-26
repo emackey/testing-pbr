@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testing</title>
+    <style>
+        html, body {
+            font-family: sans-serif;
+            max-width: 50rem;
+        }
+        .thumbnail {
+            display: inline-block;
+            position: relative;
+            width: 128px;
+            height: 128px;
+            background-size: contain;
+            margin-bottom: 1.4em;
+        }
+        .thumbnail::after {
+            position: absolute;
+            top: 132px;
+            left: 0;
+            width: 128px;
+            text-align: center;
+            content: attr(data-name);
+        }
+    </style>
+</head>
+<body>
+    <h1>Physically Based Rendering (PBR) Tests</h1>
+
+    <p>
+        These are some quick tests of PBR using
+        <a href="https://threejs.org/docs/index.html#Reference/Materials/MeshStandardMaterial"
+           target="_blank">THREE.MeshStandardMaterial</a>.
+    </p>
+
+    <hr />
+    <h2>Fire Hydrant - <a href="fire-hydrant.html" target="_blank">View Demo</a></h2>
+
+    <p>
+        The mesh came from <a href="https://share.allegorithmic.com/libraries/2124" target="_blank">Substance Share</a>
+        and is <a href="https://www.allegorithmic.com/legal/substance-share" target="_blank">covered</a> by the
+        <a href="https://www.allegorithmic.com/legal/substance-share" target="_blank">Creative Commons 4.0</a> license.
+        The textures were (mostly) procedurally generated in Substance Painter 2.3.1.  The model has some visible polygon
+        edges on the side hose hookups that were not visible in Substance Painter, but these may be artifacts from
+        a sub-optimal conversion process I used.  Also, the yellow paint looks shinier in Three.js than it did in
+        Substance Painter.
+    </p>
+
+    <p>
+        <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Base_Color.png);" data-name="Base color"></div>
+        <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Normal_OpenGL.png);" data-name="Normal"></div>
+        <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Mixed_AO.png);" data-name="AO"></div>
+        <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Metallic.png);" data-name="Metallic"></div>
+        <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Roughness.png);" data-name="Roughness"></div>
+    </p>
+
+    <hr />
+    <h2>Chest - <a href="chest.html" target="_blank">View Demo</a></h2>
+
+    <p>
+        I believe this is a demo object from Luxology Modo.  A detail map was removed such that the model
+        can work just from the primary PBR maps.
+    </p>
+
+    <p>
+        Zoom in on one of the brass bumps on the front of the chest.  Note that you can see the reflection
+        of the environment in the brass, and again on the metal buckles.  The reflection map is <i>not</i>
+        part of the Chest model, it came from the host application's scene.  I believe that glTF loaders
+        will need to provide an API for the host app to supply a reflection map to the model being loaded.
+        The reflection map cannot be included in a glTF model if the model is to be loaded into a larger
+        scene.
+    </p>
+
+    <p>
+        <div class="thumbnail" style="background-image: url(models/Chest/chest_albedo.png);" data-name="Base color"></div>
+        <div class="thumbnail" style="background-image: url(models/Chest/chest_normal.png);" data-name="Normal"></div>
+        <div class="thumbnail" style="background-image: url(models/Chest/chest_ao.png);" data-name="AO"></div>
+        <div class="thumbnail" style="background-image: url(models/Chest/chest_metalness.png);" data-name="Metallic"></div>
+        <div class="thumbnail" style="background-image: url(models/Chest/chest_roughness.png);" data-name="Roughness"></div>
+    </p>
+
+</body>
+</html>
