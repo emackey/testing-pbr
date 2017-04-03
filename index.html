@@ -3,39 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <title>Testing</title>
-    <style>
-        html, body {
-            font-family: sans-serif;
-            max-width: 50rem;
-        }
-        .thumbnail {
-            display: inline-block;
-            position: relative;
-            width: 128px;
-            height: 128px;
-            background-size: contain;
-            margin-bottom: 1.4em;
-        }
-        .thumbnail::after {
-            position: absolute;
-            top: 132px;
-            left: 0;
-            width: 128px;
-            text-align: center;
-            content: attr(data-name);
-        }
-    </style>
+    <link href="index.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="header">
     <h1>Physically Based Rendering (PBR) Tests</h1>
+
+    <p>
+        <a href="https://twitter.com/emackey">@emackey</a> -
+        <a href="https://github.com/emackey/testing-pbr">source code</a>
+    </p>
 
     <p>
         These are some quick tests of PBR using
         <a href="https://threejs.org/docs/index.html#Reference/Materials/MeshStandardMaterial"
            target="_blank">THREE.MeshStandardMaterial</a>.
     </p>
+    </div>
 
-    <hr />
+    <div class="container">
     <h2>Fire Hydrant - <a href="fire-hydrant.html" target="_blank">View Demo</a></h2>
 
     <p>
@@ -55,8 +41,9 @@
         <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Metallic.png);" data-name="Metallic"></div>
         <div class="thumbnail" style="background-image: url(models/FireHydrant/fire_hydrant_Roughness.png);" data-name="Roughness"></div>
     </p>
+    </div>
 
-    <hr />
+    <div class="container">
     <h2>Chest - <a href="chest.html" target="_blank">View Demo</a></h2>
 
     <p>
@@ -80,6 +67,15 @@
         <div class="thumbnail" style="background-image: url(models/Chest/chest_metalness.png);" data-name="Metallic"></div>
         <div class="thumbnail" style="background-image: url(models/Chest/chest_roughness.png);" data-name="Roughness"></div>
     </p>
+    </div>
+
+    <div class="container">
+    <h2><a href="normal-tangent-readme.html">Normal Tangent Test</a></h2>
+
+    <p>
+        It's normal-mapping time.  Do you know where your tangent vectors are?
+    </p>
+    </div>
 
 </body>
 </html>

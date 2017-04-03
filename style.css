@@ -1,13 +1,13 @@
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
 }
 
 body {
-  background: #000;
-  font: 30px sans-serif;
+    background: #000;
+    font: 30px sans-serif;
 }
 
 #container {
@@ -27,3 +27,17 @@ body {
     background-color:Red;
 }
 
+a.readme,
+a.readme:visited {
+    color: white;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    text-decoration: none;
+    font: 12px sans-serif;
+}
+
+a.readme:hover {
+    text-decoration: underline;
+}
